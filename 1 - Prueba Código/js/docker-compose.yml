@@ -1,27 +1,5 @@
 version: "3"
 services:
-  database:
-    image: mysql:5.7
-    volumes:
-        - /var/lib/mysql
-    environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=testcbi
-      - MYSQL_USER=testcbi
-      - MYSQL_PASSWORD=testcbi
-    ports:
-      - "3306:3306"
-
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    links:
-      - database
-    environment:
-      PMA_HOST: database
-      PMA_PORT: 3306
-    ports:
-      - '8080:80'
-
   node:
     image: "node:latest"
     user: "node"

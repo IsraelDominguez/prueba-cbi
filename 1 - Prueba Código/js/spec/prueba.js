@@ -19,6 +19,7 @@ xdescribe('Snail Matrix', function() {
     it('caracol2x2', function() {
         var input = [
             [1,  2],
+            [1,  2],
             [5,  6]
         ];
 
@@ -54,7 +55,7 @@ xdescribe('Snail Matrix', function() {
 
 const navigate = require('../problems/gps')
 
-describe('GPS Navigation', () => {
+xdescribe('GPS Navigation', () => {
     xit('test framework setup correct', function() {
         expect(true).toBe(true);
     });
